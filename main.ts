@@ -1056,7 +1056,7 @@ namespace magicWand {
     * @param type describe parameter here, eg: MagicType.PistolCartridge
     */
     //% weight=88
-    //% block="Setup magic type in %type"
+    //% block="Setup magic level in %type"
     export function setMagicType(type: MagicTypeList): void {
         MagicType = type
         basic.pause(200)
