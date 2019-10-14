@@ -12,11 +12,11 @@ namespace magicWand {
     * Types of bullets fired
     */
     export enum MagicTypeList {
-        //% block="Primary " enumval=0
+        //% block="🔥Primary" enumval=0
         Primary,
-        //% block="Intermediate" enumval=1
+        //% block="🌀Intermediate" enumval=1
         Intermediate,
-        //% block="Advanced" enumval=2
+        //% block="⚡Advanced" enumval=2
         Advanced
     }
     /**
