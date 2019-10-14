@@ -1,10 +1,11 @@
 {
     "name": "pxt-magicwand",
-    "version": "0.0.0",
-    "description": "",
+    "version": "0.0.1",
+    "description": "Microbit magic wand, write programs to unleash your magic",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
+        "neopixel": "github:elecfreaks/pxt-neopixel"
     },
     "files": [
         "README.md",
