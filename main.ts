@@ -30,6 +30,12 @@ namespace magicWand {
         //% block="💚Green" enumval=2
         Green
     }
+    export enum ButtonTypeList {
+        //% block="pressed" enumval=0
+        pressed,
+        //% block="unpressed" enumval=1
+        unpressed
+    }
 	/**
      * TODO: Infrared Coding of Blue Team First Seed Bomb Type
      */
@@ -1039,11 +1045,11 @@ namespace magicWand {
     * TODO: Set up the connection port of the fire button
     * @param pin describe parameter here, eg: DigitalPin.P8
     */
-    //% block="Setup trigger button at pin %pin"
+    //% block="Setup button at pin %pin"
     //% weight=96
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function setFireButton(pin: DigitalPin): void {
+    export function setButton(pin: DigitalPin): void {
         ButtonPin = pin
         pins.setPull(pin, PinPullMode.PullUp)
     }
@@ -1053,7 +1059,7 @@ namespace magicWand {
     */
     //% weight=88
     //% block="Setup bullet type in %type"
-    export function setBulletType(type: MagicTypeList): void {
+    export function setMagicType(type: MagicTypeList): void {
         MagicType = type
         basic.pause(200)
     }
@@ -1072,9 +1078,12 @@ namespace magicWand {
     * TODO: The fire button is pressed
     */
     //% weight=79
-    //% block="Trigger button is pressed "
-    export function openFireButton(): boolean {
-        if (pins.digitalReadPin(ButtonPin) == 0) {
+    //% block="button is pressed "
+    export function checkButton(type:ButtonTypeList): boolean {
+        if (pins.digitalReadPin(ButtonPin) == 0 && type == 0) {
+            return true
+        }
+        else if (pins.digitalReadPin(ButtonPin) == 1 && type == 1) {
             return true
         }
         else {
@@ -1086,8 +1095,8 @@ namespace magicWand {
     * TODO: Infrared Coding Based on Team Number and Bullet Type
     */
     //% weight=78
-    //% block="openFire"
-    export function openFire(): void {
+    //% block="magic"
+    export function magic(): void {
         switch (TeamId) {
             case 0:
                 if (MagicType == 0) {
