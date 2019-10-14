@@ -1,7 +1,7 @@
 /**
- * Functions to micro:bit toy Gun by ELECFREAKS Co.,Ltd.
+ * Functions to micro:bit Magic wand kit by ELECFREAKS Co.,Ltd.
  */
-//% weight=5 color=#000000 icon="\uf1e2" block="GunKit"
+//% weight=5 color=#000000 icon="\uf1e2" block="MagicWand"
 
 namespace magicWand {
     let ButtonPin = DigitalPin.P8
@@ -1058,7 +1058,7 @@ namespace magicWand {
     * @param type describe parameter here, eg: MagicType.PistolCartridge
     */
     //% weight=88
-    //% block="Setup bullet type in %type"
+    //% block="Setup magic type in %type"
     export function setMagicType(type: MagicTypeList): void {
         MagicType = type
         basic.pause(200)
@@ -1079,7 +1079,7 @@ namespace magicWand {
     */
     //% weight=79
     //% block="button is pressed "
-    export function checkButton(type:ButtonTypeList): boolean {
+    export function checkButton(type: ButtonTypeList): boolean {
         if (pins.digitalReadPin(ButtonPin) == 0 && type == 0) {
             return true
         }
@@ -1095,7 +1095,7 @@ namespace magicWand {
     * TODO: Infrared Coding Based on Team Number and Bullet Type
     */
     //% weight=78
-    //% block="magic"
+    //% block="Execute once magic"
     export function magic(): void {
         switch (TeamId) {
             case 0:
