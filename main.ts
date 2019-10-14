@@ -30,11 +30,22 @@ namespace magicWand {
         //% block="💚Green" enumval=2
         Green
     }
-    export enum ButtonTypeList {
-        //% block="pressed" enumval=0
-        pressed,
-        //% block="unpressed" enumval=1
-        unpressed
+    export enum ButtonType {
+        //% block="pressed"
+        down = PulseValue.High,
+        //% block="released"
+        up = PulseValue.Low
+    }
+
+    export enum ButtonBitPin {
+        //% block="P0"
+        P0 = DAL.MICROBIT_ID_IO_P0,
+        //% block="P1"
+        P1 = DAL.MICROBIT_ID_IO_P1,
+        //% block="P2"
+        P2 = DAL.MICROBIT_ID_IO_P2,
+        //% block="P3"
+        P3 = DAL.MICROBIT_ID_IO_P3
     }
 	/**
      * TODO: Infrared Coding of Blue Team First Seed Bomb Type
@@ -1040,19 +1051,6 @@ namespace magicWand {
     export function setSendPin(pin: AnalogPin): void {
         SendPin = pin
     }
-
-    /**
-    * TODO: Set up the connection port of the fire button
-    * @param pin describe parameter here, eg: DigitalPin.P8
-    */
-    //% block="Setup button at pin %pin"
-    //% weight=96
-    //% pin.fieldEditor="gridpicker"
-    //% pin.fieldOptions.columns=4
-    export function setButton(pin: DigitalPin): void {
-        ButtonPin = pin
-        pins.setPull(pin, PinPullMode.PullUp)
-    }
     /**
     * TODO: Setting Bullet Type
     * @param type describe parameter here, eg: MagicType.PistolCartridge
@@ -1073,24 +1071,45 @@ namespace magicWand {
         TeamId = id
         basic.pause(200)
     }
-
     /**
-    * TODO: The fire button is pressed
+    * get Button
     */
-    //% weight=79
-    //% block="button is %type "
-    export function checkButton(type: ButtonTypeList): boolean {
-        if (pins.digitalReadPin(ButtonPin) == 0 && type == 0) {
-            return true
+    //% blockId=getButton block="on %button button is pressed"
+    export function getButton(button: ButtonBitPin): boolean {
+        if (button == 0) {
+            pins.setPull(DigitalPin.P0, PinPullMode.PullUp)
         }
-        else if (pins.digitalReadPin(ButtonPin) == 1 && type == 1) {
-            return true
+        else if (button == 1) {
+            pins.setPull(DigitalPin.P1, PinPullMode.PullUp)
         }
-        else {
-            return false
+        else if (button == 2) {
+            pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
         }
+        else if (button == 3) {
+            pins.setPull(DigitalPin.P3, PinPullMode.PullUp)
+        }
+        return (pins.digitalReadPin(<number>button) == 0 ? true : false)
     }
 
+    /**
+    * Registers code to run when a joystick:bit event is detected.
+    */
+    //% blockId=onButtonEvent block="on %button button is %event" blockExternalInputs=false
+    export function onButtonEvent(button: ButtonBitPin, event: ButtonType, handler: Action): void {
+        if (button == 0) {
+            pins.setPull(DigitalPin.P0, PinPullMode.PullUp)
+        }
+        else if (button == 1) {
+            pins.setPull(DigitalPin.P1, PinPullMode.PullUp)
+        }
+        else if (button == 2) {
+            pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
+        }
+        else if (button == 3) {
+            pins.setPull(DigitalPin.P3, PinPullMode.PullUp)
+        }
+        pins.onPulsed(<number>button, <number>event, handler);
+    }
     /**
     * TODO: Infrared Coding Based on Team Number and Bullet Type
     */
