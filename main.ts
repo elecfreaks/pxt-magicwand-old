@@ -1,7 +1,7 @@
 /**
  * Functions to micro:bit Magic wand kit by ELECFREAKS Co.,Ltd.
  */
-//% weight=5 color=#000000 icon="\uf1e2" block="MagicWand"
+//% weight=5 color=#FD7E14 icon="\uf0d0" block="MagicWand"
 
 namespace magicWand {
     let ButtonPin = DigitalPin.P8
@@ -1078,7 +1078,7 @@ namespace magicWand {
     * TODO: The fire button is pressed
     */
     //% weight=79
-    //% block="button is pressed "
+    //% block="button is %type "
     export function checkButton(type: ButtonTypeList): boolean {
         if (pins.digitalReadPin(ButtonPin) == 0 && type == 0) {
             return true
