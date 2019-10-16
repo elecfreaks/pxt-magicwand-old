@@ -9,6 +9,8 @@
     },
     "files": [
         "README.md",
+        "_locales/zh/pxt-magicwand-jsdoc-strings.json",
+        "_locales/zh/pxt-magicwand-strings.json",
         "main.ts"
     ],
     "testFiles": [
