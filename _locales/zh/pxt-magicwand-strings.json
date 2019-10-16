@@ -1,0 +1,22 @@
+{
+  "magicWand.ButtonBitPin.P0|block": "P0",
+  "magicWand.ButtonBitPin.P1|block": "P1",
+  "magicWand.ButtonBitPin.P2|block": "P2",
+  "magicWand.ButtonBitPin.P3|block": "P3",
+  "magicWand.ButtonType.down|block": "按下",
+  "magicWand.ButtonType.up|block": "抬起",
+  "magicWand.MagicTypeList.Advanced|block": "⚡高级",
+  "magicWand.MagicTypeList.Intermediate|block": "🌀中级",
+  "magicWand.MagicTypeList.Primary|block": "🔥初级",
+  "magicWand.TeamIdList.Blue|block": "💙蓝队",
+  "magicWand.TeamIdList.Green|block": "💚绿队",
+  "magicWand.TeamIdList.Red|block": "❤红队",
+  "magicWand.getButton|block": "连接至 %button 的按钮按下",
+  "magicWand.magic|block": "释放一次魔法",
+  "magicWand.onButtonEvent|block": "连接至 %button 的按钮 %event",
+  "magicWand.setMagicType|block": "设置魔法等级为 %type",
+  "magicWand.setSendPin|block": "设置红外发射连接口为 %pin",
+  "magicWand.setTeamId|block": "设置队伍颜色为 %id",
+  "magicWand|block": "魔杖",
+  "{id:category}MagicWand": "魔杖"
+}

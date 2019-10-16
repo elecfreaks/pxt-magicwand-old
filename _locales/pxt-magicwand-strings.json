@@ -1,0 +1,22 @@
+{
+  "magicWand.ButtonBitPin.P0|block": "P0",
+  "magicWand.ButtonBitPin.P1|block": "P1",
+  "magicWand.ButtonBitPin.P2|block": "P2",
+  "magicWand.ButtonBitPin.P3|block": "P3",
+  "magicWand.ButtonType.down|block": "pressed",
+  "magicWand.ButtonType.up|block": "released",
+  "magicWand.MagicTypeList.Advanced|block": "⚡Advanced",
+  "magicWand.MagicTypeList.Intermediate|block": "🌀Intermediate",
+  "magicWand.MagicTypeList.Primary|block": "🔥Primary",
+  "magicWand.TeamIdList.Blue|block": "💙Blue",
+  "magicWand.TeamIdList.Green|block": "💚Green",
+  "magicWand.TeamIdList.Red|block": "❤️Red",
+  "magicWand.getButton|block": "on %button button is pressed",
+  "magicWand.magic|block": "Execute once magic",
+  "magicWand.onButtonEvent|block": "on %button button is %event",
+  "magicWand.setMagicType|block": "Setup magic level in %type",
+  "magicWand.setSendPin|block": "Setup IR emission at pin %pin",
+  "magicWand.setTeamId|block": "Setup team ID in %id",
+  "magicWand|block": "MagicWand",
+  "{id:category}MagicWand": "MagicWand"
+}
