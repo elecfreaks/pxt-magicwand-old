@@ -1,21 +1,28 @@
-# pxt-magicwand
+# micro:bit toy gun kit
+
+This is the toy type educational product produced by ELECFREAKS. It can interact with toys purchased in the market and truly complete learning in play.
+
+This library is designed to drive micro:bit magic wand kit , You can get this here.
+
+[https://www.elecfreaks.com](https://www.elecfreaks.com/estore)
+
+## Code Example
+```JavaScript
+magicWand.onButtonEvent(magicWand.ButtonBitPin.P2, magicWand.ButtonType.down, function () {
+    magicWand.magic()
+})
+magicWand.setSendPin(AnalogPin.P1)
+magicWand.setMagicType(magicWand.MagicTypeList.Primary)
+basic.forever(function () {
+    if (magicWand.getButton(magicWand.ButtonBitPin.P3)) {
+        magicWand.setMagicType(magicWand.MagicTypeList.Advanced)
+    }
+})
 
 
-
-## TODO
-
-- [ ] Add a reference for your blocks here
-- [ ] Add "icon.png" image (300x200) in the root folder
-- [ ] Add "- beta" to the GitHub project description if you are still iterating it.
-- [ ] Turn on your automated build on https://travis-ci.org
-- [ ] Use "pxt bump" to create a tagged release on GitHub
-- [ ] On GitHub, create a new file named LICENSE. Select the MIT License template.
-- [ ] Get your package reviewed and approved https://makecode.microbit.org/extensions/approval
-
-Read more at https://makecode.microbit.org/extensions
-
+```
 ## Supported targets
+for PXT/microbit
 
-* for PXT/microbit
-(The metadata above is needed for package search.)
-
+## License
+MIT
