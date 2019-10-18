@@ -23,7 +23,7 @@
   "magicWand.getButton|block": "按钮被按下",
   "magicWand.magic|block": "释放一次魔法",
   "magicWand.onButtonEvent|block": "在 %button 的按钮被 %event",
-  "magicWand.setButtonPin|block": "设置按钮连接口味 %pin",
+  "magicWand.setButtonPin|block": "设置按钮连接口 %pin",
   "magicWand.setMagicType|block": "设置魔法等级为 %type",
   "magicWand.setSendPin|block": "设置红外发射连接口 %pin",
   "magicWand|block": "魔棒",
