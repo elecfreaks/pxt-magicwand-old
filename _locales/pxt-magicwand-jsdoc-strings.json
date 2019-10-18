@@ -1,16 +1,14 @@
 {
   "magicWand": "Functions to micro:bit Magic wand kit by ELECFREAKS Co.,Ltd.",
   "magicWand.MagicTypeList": "Types of bullets fired",
-  "magicWand.TeamIdList": "Team Number",
-  "magicWand.blueOne": "TODO: Infrared Coding of Blue Team Second Seed Bomb Type",
   "magicWand.blueZero": "TODO: Infrared Coding of Blue Team First Seed Bomb Type",
   "magicWand.getButton": "get Button",
   "magicWand.magic": "TODO: Infrared Coding Based on Team Number and Bullet Type",
   "magicWand.onButtonEvent": "Registers code to run when a joystick:bit event is detected.",
+  "magicWand.setButtonPin": "TODO: Infrared Emission Module Connection Port",
+  "magicWand.setButtonPin|param|pin": "describe parameter here, eg: AnalogPin.P1",
   "magicWand.setMagicType": "TODO: Setting Bullet Type",
   "magicWand.setMagicType|param|type": "describe parameter here, eg: MagicType.PistolCartridge",
   "magicWand.setSendPin": "TODO: Infrared Emission Module Connection Port",
-  "magicWand.setSendPin|param|pin": "describe parameter here, eg: AnalogPin.P1",
-  "magicWand.setTeamId": "TODO: Setting Team ID",
-  "magicWand.setTeamId|param|id": "describe parameter here, eg: TeamId.Blue"
+  "magicWand.setSendPin|param|pin": "describe parameter here, eg: AnalogPin.P1"
 }
