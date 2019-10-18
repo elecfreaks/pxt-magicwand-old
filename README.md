@@ -1,4 +1,4 @@
-# micro:bit toy gun kit
+# micro:bit magic wand kit
 
 This is the toy type educational product produced by ELECFREAKS. It can interact with toys purchased in the market and truly complete learning in play.
 
@@ -8,16 +8,20 @@ This library is designed to drive micro:bit magic wand kit , You can get this he
 
 ## Code Example
 ```JavaScript
-magicWand.onButtonEvent(magicWand.ButtonBitPin.P2, magicWand.ButtonType.down, function () {
+input.onButtonPressed(Button.A, function () {
+    magicWand.setMagicType(magicWand.MagicTypeList.Primary)
+})
+magicWand.onButtonEvent(magicWand.JoystickBitPin.P2, magicWand.ButtonType.down, function () {
     magicWand.magic()
 })
 magicWand.setSendPin(AnalogPin.P1)
-magicWand.setMagicType(magicWand.MagicTypeList.Primary)
+magicWand.setButtonPin(DigitalPin.P2)
 basic.forever(function () {
-    if (magicWand.getButton(magicWand.ButtonBitPin.P3)) {
+    if (magicWand.getButton()) {
         magicWand.setMagicType(magicWand.MagicTypeList.Advanced)
     }
 })
+
 
 
 ```
