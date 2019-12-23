@@ -301,8 +301,8 @@ namespace magicWand {
         basic.pause(200)
     }
     //% blockId=octopus_crash weight=70 blockGap=30
-    //% block="button is pressed"
-    export function crashSensor(crashSensorPin:DigitalPin): boolean {
+    //% block="on %crashSensorPin button is pressed"
+    export function crashSensor(crashSensorPin: DigitalPin): boolean {
         let a: number = pins.digitalReadPin(crashSensorPin);
         if (a == 1) {
             return true;

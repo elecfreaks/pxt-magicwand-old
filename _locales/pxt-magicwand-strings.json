@@ -20,7 +20,7 @@
   "magicWand.JoystickBitPin.P9|block": "P9",
   "magicWand.MagicTypeList.Advanced|block": "⚡Advanced",
   "magicWand.MagicTypeList.Primary|block": "🔥Primary",
-  "magicWand.crashSensor|block": "button is pressed",
+  "magicWand.crashSensor|block": "on %crashSensorPin button is pressed",
   "magicWand.magic|block": "Execute once magic",
   "magicWand.onButtonEvent|block": "on %button button is %event",
   "magicWand.setMagicType|block": "Setup magic level in %type",

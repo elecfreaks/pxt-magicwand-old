@@ -22,7 +22,7 @@
   "magicWand.MagicTypeList.Primary|block": "🔥初级",
   "magicWand.magic|block": "释放一次魔法",
   "magicWand.onButtonEvent|block": "在 %button 的按钮被 %event",
-  "magicWand.crashSensor|block": "按钮被按下",
+  "magicWand.crashSensor|block": "在 %crashSensorPin 口的按钮被按下",
   "magicWand.setMagicType|block": "设置魔法等级为 %type",
   "magicWand.setSendPin|block": "设置红外发射连接口 %pin",
   "magicWand|block": "魔棒",
