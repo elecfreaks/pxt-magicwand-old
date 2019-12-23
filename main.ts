@@ -291,16 +291,6 @@ namespace magicWand {
         SendPin = pin
     }
     /**
-    * TODO: Infrared Emission Module Connection Port
-    * @param pin describe parameter here, eg: AnalogPin.P1
-    */
-    //% block="Setup Button at pin %pin"
-    //% weight=99
-    export function setButtonPin(pin: DigitalPin): void {
-        ButtonPin = pin
-        pins.setPull(pin, PinPullMode.PullUp)
-    }
-    /**
     * TODO: Setting Bullet Type
     * @param type describe parameter here, eg: MagicType.PistolCartridge
     */
@@ -310,22 +300,19 @@ namespace magicWand {
         MagicType = type
         basic.pause(200)
     }
-    /**
-    * get Button
-    */
-    //% blockId=getButton block="Button is pressed"
-    export function getButton(): boolean {
-        let a: number = pins.digitalReadPin(ButtonPin);
-        if (a == 0) {
+    //% blockId=octopus_crash weight=70 blockGap=30
+    //% block="button is pressed"
+    export function crashSensor(crashSensorPin:DigitalPin): boolean {
+        let a: number = pins.digitalReadPin(crashSensorPin);
+        if (a == 1) {
             return true;
         } else return false;
     }
-
     /**
-* Registers code to run when a joystick:bit event is detected.
-*/
+    * Registers code to run when a joystick:bit event is detected.
+    */
     //% blockId=onButtonEvent block="on %button button is %event" blockExternalInputs=false
-    export function onButtonEvent(button: JoystickBitPin,event: ButtonType, handler: Action): void {
+    export function onButtonEvent(button: JoystickBitPin, event: ButtonType, handler: Action): void {
         pins.onPulsed(<number>button, <number>event, handler);
     }
 
