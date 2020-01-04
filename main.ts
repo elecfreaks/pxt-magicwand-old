@@ -304,7 +304,7 @@ namespace magicWand {
     //% block="on %crashSensorPin button is pressed"
     export function crashSensor(crashSensorPin: DigitalPin): boolean {
         let a: number = pins.digitalReadPin(crashSensorPin);
-        if (a == 1) {
+        if (a == 0) {
             return true;
         } else return false;
     }
